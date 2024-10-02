@@ -42,7 +42,7 @@
                         if (event.key === 'Enter') {
                             const start = new Date();
 
-                            fetch(`http://localhost:8983/solr/nutch/select?${new URLSearchParams({
+                            fetch(`http://${location.hostname}:8983/solr/nutch/select?${new URLSearchParams({
                                 q: `content:${event.target.value}`,
                                 rows: 100
                                 })}`)
