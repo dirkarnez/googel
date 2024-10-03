@@ -4,7 +4,7 @@ Description=Googel
 [Service]
 Restart=always
 ExecStart=~/Desktop/googel/staticserver --mode=spa --port=9987 --root=$(pwd)
-ExecStop=pskill staticserver
+ExecStop=pkill -x 'staticserver'
 
 [Install]
 WantedBy=default.target
