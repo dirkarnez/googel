@@ -2,8 +2,10 @@
 Description=Googel
 
 [Service]
-Restart=always
-ExecStart=/home/home/Desktop/googel/staticserver --mode=spa --port=9987 --root=/home/home/Desktop/googel/
+Type=simple
+Restart=on-failure
+ExecStart=/home/home/Desktop/googel/staticserver --mode=spa --port=9987
+WorkingDirectory=/home/home/Desktop/googel/
 StandardOutput=file:/home/home/Desktop/googel/stdout-file
 ExecStop=pkill -x 'staticserver'
 
