@@ -1,7 +1,7 @@
 [Unit]
 Description=Googel
-Requires=docker.service
-After=docker.service
+Requires=network.target
+After=network.target
 
 [Service]
 Type=simple
@@ -9,7 +9,6 @@ Restart=on-failure
 ExecStart=/home/home/Desktop/googel/staticserver --https=false --mode=spa --port=9987
 WorkingDirectory=/home/home/Desktop/googel/
 StandardOutput=file:/home/home/Desktop/googel/stdout-file
-
 
 [Install]
 WantedBy=multi-user.target
