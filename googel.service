@@ -3,7 +3,7 @@ Description=Googel
 
 [Service]
 Restart=always
-ExecStart=~/Desktop/googel/staticserver --mode=spa --port=9987 --root=$(pwd)
+ExecStart=~/Desktop/googel/staticserver --mode=spa --port=9987 --root=~/Desktop/googel/
 ExecStop=pkill -x 'staticserver'
 
 [Install]
