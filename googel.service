@@ -7,7 +7,7 @@ After=network.target
 Type=simple
 Restart=on-failure
 ExecStart=/home/home/Desktop/googel/staticserver --https=false --mode=spa --port=9987
-ExecStop=pkill -x 'staticserver'
+ExecStop=pkill staticserver
 WorkingDirectory=/home/home/Desktop/googel/
 StandardOutput=file:/home/home/Desktop/googel/stdout-file
 
